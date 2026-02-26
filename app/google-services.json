@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1042283686842",
+    "project_id": "campusgo-dc277",
+    "storage_bucket": "campusgo-dc277.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042283686842:android:d3d1a4d72a879d93608b83",
+        "android_client_info": {
+          "package_name": "com.jrotero.campusgo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFUsQ7MBvSaVPtXEY8c68PuaMPA1ML5a4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
