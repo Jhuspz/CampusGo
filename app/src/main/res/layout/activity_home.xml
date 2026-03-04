@@ -16,6 +16,15 @@
         android:textColor="#333333"
         android:layout_marginBottom="20dp"/>
 
+    <Button
+        android:id="@+id/btnIrAPublicar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ofrecer mi coche"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
