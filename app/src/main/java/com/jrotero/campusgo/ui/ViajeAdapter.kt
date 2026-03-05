@@ -15,6 +15,8 @@ class ViajeAdapter(
 
     class ViajeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvRuta: TextView = view.findViewById(R.id.tvRuta)
+        // --- NUEVO: Vinculamos el texto de la fecha ---
+        val tvFecha: TextView = view.findViewById(R.id.tvFecha)
         val tvHora: TextView = view.findViewById(R.id.tvHora)
         val tvPlazas: TextView = view.findViewById(R.id.tvPlazas)
         val tvPrecio: TextView = view.findViewById(R.id.tvPrecio)
@@ -29,6 +31,8 @@ class ViajeAdapter(
     override fun onBindViewHolder(holder: ViajeViewHolder, position: Int) {
         val viaje = listaViajes[position]
         holder.tvRuta.text = "${viaje.origen} ➔ ${viaje.destino}"
+        // --- NUEVO: Pasamos el dato de la fecha a la tarjeta ---
+        holder.tvFecha.text = "📅 ${viaje.fecha}"
         holder.tvHora.text = "🕒 ${viaje.hora}"
         holder.tvPlazas.text = "💺 ${viaje.plazasDisponibles} plazas"
         holder.tvPrecio.text = "${viaje.precio}€"

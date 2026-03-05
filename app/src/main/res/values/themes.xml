@@ -3,6 +3,7 @@
     <style name="Base.Theme.CampusGo" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/campusgo_blue</item>
     </style>
 
     <style name="Theme.CampusGo" parent="Base.Theme.CampusGo" />

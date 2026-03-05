@@ -27,6 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.PublicarViajeActivity" />
+        <activity android:name=".ui.BuscarViajesActivity" />
 
     </application>
 

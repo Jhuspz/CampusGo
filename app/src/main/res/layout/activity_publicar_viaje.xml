@@ -26,10 +26,22 @@
         android:hint="¿A qué facultad vas?" />
 
     <EditText
+        android:id="@+id/etFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Selecciona la fecha 📅"
+        android:focusable="false"
+        android:clickable="true"
+        android:inputType="none" />
+
+    <EditText
         android:id="@+id/etHora"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Hora (ej: 08:30)" />
+        android:hint="Selecciona la hora 🕒"
+        android:focusable="false"
+        android:clickable="true"
+        android:inputType="none" />
 
     <EditText
         android:id="@+id/etPlazas"
@@ -38,11 +50,29 @@
         android:hint="Plazas disponibles"
         android:inputType="number" />
 
+    <EditText
+        android:id="@+id/etPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio por pasajero (€)"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="20dp"/>
+
     <Button
         android:id="@+id/btnConfirmarViaje"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Publicar Viaje"
+        android:backgroundTint="#0099cc"
         android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Cancelar y Volver"
+        android:backgroundTint="#EF4444"
+        android:textColor="@color/white" />
 
 </LinearLayout>

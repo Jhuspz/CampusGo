@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="campusgo_blue">#0099cc</color>
+    <color name="campusgo_dark_blue">#1D4ED8</color>
 </resources>
