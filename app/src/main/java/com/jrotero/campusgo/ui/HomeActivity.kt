@@ -48,10 +48,8 @@ class HomeActivity : AppCompatActivity() {
 
         // Botón 2: Mis Reservas (Disponible para TODOS)
         btnReservas.setOnClickListener {
-            // Nota: Tendrás que crear MisReservasActivity más adelante
-            // val intent = Intent(this, MisReservasActivity::class.java)
-            // startActivity(intent)
-            Toast.makeText(this, "Próximamente: Pantalla de Mis Reservas", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MisReservasActivity::class.java)
+            startActivity(intent)
         }
 
         // Botón 3: Publicar Viaje (SOLO para CONDUCTORES)
@@ -62,10 +60,8 @@ class HomeActivity : AppCompatActivity() {
 
         // Botón 4: Mis Viajes Publicados (SOLO para CONDUCTORES)
         btnMisViajes.setOnClickListener {
-            // Nota: Tendrás que crear MisViajesActivity más adelante
-            // val intent = Intent(this, MisViajesActivity::class.java)
-            // startActivity(intent)
-            Toast.makeText(this, "Próximamente: Pantalla de Mis Viajes", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MisViajesActivity::class.java)
+            startActivity(intent)
         }
 
         // Botón 5: Cerrar Sesión

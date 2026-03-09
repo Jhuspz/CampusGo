@@ -44,6 +44,8 @@ class BuscarViajesActivity : AppCompatActivity() {
     }
 
     private fun consultarViajesActivos() {
+        val miUsuarioId = auth.currentUser?.uid // Sacamos tu ID
+
         db.collection("viajes")
             .whereEqualTo("estado", "activo")
             .get()
@@ -51,11 +53,13 @@ class BuscarViajesActivity : AppCompatActivity() {
                 listaViajes.clear()
                 for (documento in resultado) {
                     val viaje = documento.toObject(Viaje::class.java)
-                    if (viaje.plazasDisponibles > 0) {
+
+                    // LÓGICA MEJORADA: Solo lo mostramos si tiene plazas Y NO eres el conductor
+                    if (viaje.plazasDisponibles > 0 && viaje.conductorId != miUsuarioId) {
                         listaViajes.add(viaje)
                     }
                 }
-                viajeAdapter.notifyDataSetChanged()
+                viajeAdapter.notifyDataSetChanged() // Refresca la lista
             }
             .addOnFailureListener { e ->
                 Toast.makeText(this, "Error al cargar viajes: ${e.message}", Toast.LENGTH_SHORT).show()
