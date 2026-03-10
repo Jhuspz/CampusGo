@@ -39,11 +39,10 @@ class MisViajesActivity : AppCompatActivity() {
         rvMisViajes = findViewById(R.id.rvMisViajes)
         rvMisViajes.layoutManager = LinearLayoutManager(this)
 
-        // CONFIGURAMOS LOS 3 BOTONES DEL ADAPTADOR
+        // CONFIGURAMOS LOS BOTONES DEL ADAPTADOR
         misViajesAdapter = MisViajesAdapter(
             listaViajes,
             onVerPasajeros = { viaje -> verPasajeros(viaje) },
-            onModificar = { viaje -> modificarViaje(viaje) },
             onEliminar = { viaje -> mostrarDialogoEliminar(viaje) }
         )
         rvMisViajes.adapter = misViajesAdapter
@@ -90,13 +89,7 @@ class MisViajesActivity : AppCompatActivity() {
             }
     }
 
-    // --- ACCIÓN 2: MODIFICAR ---
-    private fun modificarViaje(viaje: Viaje) {
-        // Por ahora lanzamos un Toast. Explicado abajo 👇
-        Toast.makeText(this, "Apertura de edición en proceso...", Toast.LENGTH_SHORT).show()
-    }
-
-    // --- ACCIÓN 3: ELIMINAR ---
+    // --- ACCIÓN ELIMINAR ---
     private fun mostrarDialogoEliminar(viaje: Viaje) {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Eliminar Viaje")

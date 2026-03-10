@@ -12,7 +12,6 @@ import com.jrotero.campusgo.modelo.Viaje
 class MisViajesAdapter(
     private val listaViajes: List<Viaje>,
     private val onVerPasajeros: (Viaje) -> Unit,
-    private val onModificar: (Viaje) -> Unit,
     private val onEliminar: (Viaje) -> Unit
 ) : RecyclerView.Adapter<MisViajesAdapter.MiViajeViewHolder>() {
 
